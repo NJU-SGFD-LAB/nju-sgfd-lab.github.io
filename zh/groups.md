@@ -1,5 +1,5 @@
 ---
-title: 实验室人员
+title: 成员
 layout: page
 lang: zh
 permalink: /groups/

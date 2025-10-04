@@ -3,27 +3,28 @@ layout: base
 ---
 
 <div class="home">
+
   {%- if page.title -%}
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
   {{ content }}
 
+  {% comment %}
+  根据当前页面语言筛选 posts/news
+  page.lang 需要在 index.md 或 en/index.md 中定义为 "zh" 或 "en"
+  {% endcomment %}
 
-  {% if site.paginate %}
-    {% assign posts = paginator.posts %}
-  {% else %}
-    {% assign posts = site.posts %}
-  {% endif %}
+  {% assign news_posts = site.posts | where: "lang", page.lang | sort: "date" | reverse %}
 
+  {%- if news_posts.size > 0 -%}
+    <h2 class="post-list-heading">
+      {% if page.lang == "zh" %}新闻动态{% else %}News{% endif %}
+    </h2>
 
-  {%- if posts.size > 0 -%}
-    {%- if page.list_title -%}
-      <h2 class="post-list-heading">{{ page.list_title }}</h2>
-    {%- endif -%}
     <ul class="post-list">
-      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-      {%- for post in posts -%}
+      {%- assign date_format = site.minima.date_format | default: "%Y-%m-%d" -%}
+      {%- for post in news_posts limit:3 -%}
       <li>
         <span class="post-meta">{{ post.date | date: date_format }}</span>
         <h3>
@@ -38,30 +39,19 @@ layout: base
       {%- endfor -%}
     </ul>
 
-    {% if site.paginate %}
-      <div class="pager">
-        <ul class="pagination">
-        {%- if paginator.previous_page %}
-          <li>
-            <a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page" title="Go to Page {{ paginator.previous_page }}">
-              {{ paginator.previous_page }}
-            </a>
-          </li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-          <li><div class="current-page">{{ paginator.page }}</div></li>
-        {%- if paginator.next_page %}
-          <li>
-            <a href="{{ paginator.next_page_path | relative_url }}" class="next-page" title="Go to Page {{ paginator.next_page }}">
-              {{ paginator.next_page }}
-            </a>
-          </li>
-        {%- else %}
-          <li><div class="pager-edge">•</div></li>
-        {%- endif %}
-        </ul>
+    {%- if news_posts.size > 3 -%}
+      <div class="more-news">
+        <a href="{% if page.lang == 'zh' %}/news{% else %}/en/news{% endif %}" class="button">
+          {% if page.lang == 'zh' %}更多新闻{% else %}More News{% endif %}
+        </a>
       </div>
-    {%- endif %}
+    {%- endif -%}
+
+    {% comment %}
+    如果你同时使用分页，可以保留原有分页逻辑，
+    这里只显示首页最新 3 条新闻
+    {% endcomment %}
+
   {%- endif -%}
+
 </div>
