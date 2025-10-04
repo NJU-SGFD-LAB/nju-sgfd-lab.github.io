@@ -1,7 +1,9 @@
 ---
 layout: page
 title: About
-permalink: /about/
+lang: en
+permalink: /en/about/
+nav_order: 10
 ---
 
 This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)

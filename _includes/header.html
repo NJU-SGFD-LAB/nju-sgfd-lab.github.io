@@ -1,0 +1,28 @@
+<header class="site-header">
+
+  <!-- 第一行：标题 -->
+  <div class="header-title">
+    <span class="title-zh">{{ site.title_zh | default: "南京大学 SGFD 实验室" }}</span><br>
+    <span class="title-en">{{ site.title_en | default: "NJU SGFD Lab" }}</span>
+  </div>
+
+  <!-- 第二行：导航 + 语言切换 -->
+  <div class="header-nav-lang">
+    <!-- 左侧导航栏 -->
+    <nav class="site-nav">
+      {% assign nav_pages = site.pages | where_exp: "p", "p.lang == page.lang" | sort: "nav_order" %}
+      {% assign nav_paths = nav_pages | map: "path" %}
+      {% include nav-items.html paths=nav_paths %}
+    </nav>
+
+    <!-- 右侧语言切换按钮 -->
+    <div class="language-switch">
+      {% if page.lang == "en" %}
+        <a href="{{ page.url | replace:'/en/', '/' }}">中文</a>
+      {% else %}
+        <a href="{{ page.url | prepend: '/en/' | replace: '//', '/' }}">English</a>
+      {% endif %}
+    </div>
+  </div>
+
+</header>

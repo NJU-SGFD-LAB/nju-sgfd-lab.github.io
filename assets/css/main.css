@@ -1,0 +1,68 @@
+/* 第一行标题 */
+.header-title {
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+.header-title .title-zh {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.header-title .title-en {
+  font-size: 18px;
+  font-weight: normal;
+  color: #555;
+}
+
+/* 整体 wrapper 或 header-nav-lang 容器 */
+.header-nav-lang {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;   /* 正文最大宽度，和内容区一致 */
+  margin: 0 auto;     /* 居中容器 */
+  padding: 0 20px;    /* 左右内边距，防止贴边 */
+  box-sizing: border-box;
+}
+
+/* 导航栏内部 */
+.site-nav .nav-items {
+  display: flex;
+  gap: 15px;
+}
+
+.site-nav .nav-item {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.site-nav .nav-item:hover {
+  color: #0073e6;
+}
+
+/* 语言切换按钮 */
+.language-switch a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+.language-switch a:hover {
+  color: #0073e6;
+}
+
+/* 小屏幕适配 */
+@media screen and (max-width: 768px) {
+  .header-nav-lang {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .site-nav .nav-items {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
