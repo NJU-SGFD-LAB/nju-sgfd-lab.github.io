@@ -1,0 +1,55 @@
+/* Header 标题部分 */
+.header-title {
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 10px;
+
+  .title-zh {
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .title-en {
+    font-size: 18px;
+    font-weight: normal;
+    color: #555;
+  }
+}
+
+/* Header 整体布局 */
+.header-nav-lang {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 导航栏 */
+.site-nav .nav-items {
+  display: flex;
+  gap: 15px;
+}
+
+.site-nav .nav-item {
+  text-decoration: none;
+  color: $text-color;
+  font-weight: 500;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+
+/* 语言切换 */
+.language-switch a {
+  text-decoration: none;
+  font-weight: bold;
+  color: $text-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
