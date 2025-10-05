@@ -1,0 +1,32 @@
+---
+layout: base
+---
+
+<div class="members-page wrapper">
+
+  <h1 class="page-title">
+    {% if page.lang == "zh" %}
+      成员介绍
+    {% else %}
+      Our Members
+    {% endif %}
+  </h1>
+
+  <div class="members-grid">
+    {% for member in site.data.members %}
+    <div class="member-card">
+      <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="member-photo">
+      <div class="member-info">
+        <h2 class="member-name">{{ member.name }}</h2>
+        {% if page.lang == "zh" %}
+          <p class="member-title">{{ member.title_zh }}</p>
+          <p class="member-intro">{{ member.intro_zh }}</p>
+        {% else %}
+          <p class="member-title">{{ member.title_en }}</p>
+          <p class="member-intro">{{ member.intro_en }}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -8,6 +8,10 @@ layout: base
     <h1 class="page-heading">{{ page.title }}</h1>
   {%- endif -%}
 
+  <!-- 图片展示 -->
+  <img src="{{ '/assets/images/home/background.jpg' | relative_url }}" alt="实验室背景图" class="home-background">
+
+
   {{ content }}
 
   {% comment %}

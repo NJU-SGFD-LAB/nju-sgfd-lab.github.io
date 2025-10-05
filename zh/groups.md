@@ -1,6 +1,6 @@
 ---
 title: 成员
-layout: page
+layout: member
 lang: zh
 permalink: /groups/
 nav_order: 4
