@@ -1,0 +1,37 @@
+---
+layout: base
+---
+
+<div class="instruments-page">
+
+  {%- for instr in site.data.instruments -%}
+  <div class="instrument-card">
+
+    <img 
+      class="instrument-image"
+      src="{{ '/assets/images/instruments/' | append: instr.img | relative_url }}" 
+      alt="{{ instr.name_zh }}"
+    >
+
+    <div class="instrument-info">
+      <h2 class="instrument-title">{{ instr.name_zh }}</h2>
+      <h3 class="instrument-subtitle">{{ instr.name_en }}</h3>
+
+      <p class="instrument-description">
+        {% if page.lang == "zh" %}
+          {{ instr.intro_zh }}
+        {% else %}
+          {{ instr.intro_en }}
+        {% endif %}
+      </p>
+
+
+      <a href="{{ '/instruments/' | append: page.lang | append: '/' | append: instr.detail_page | append: '.html' | relative_url }}">
+        {% if page.lang == "zh" %} 详情 {% else %} Learn More {% endif %}
+      </a>
+    </div>
+
+  </div>
+  {%- endfor -%}
+
+</div>

@@ -1,0 +1,160 @@
+/* ========== Instruments 页面样式 ========== */
+
+.instruments-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.instrument-card {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  margin-bottom: 30px; /* 仪器间距 */
+  padding: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.instrument-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.12);
+}
+
+/* 图片部分 */
+.instrument-image {
+  flex-shrink: 0;
+  width: 280px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+  background: #f7f7f7;
+}
+
+/* 右侧文字内容 */
+.instrument-info {
+  flex: 1;
+}
+
+.instrument-title {
+  font-size: 1.3em;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.instrument-subtitle {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.instrument-description {
+  font-size: 0.95em;
+  color: #333;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* 小屏幕适配 */
+@media screen and (max-width: 768px) {
+  .instrument-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .instrument-image {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .instrument-info {
+    text-align: center;
+  }
+}
+
+/* ========== 仪器详情页样式 ========== */
+
+.instrument-detail-page {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px 40px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.instrument-detail-header {
+  text-align: center;
+  padding: 40px 0 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.instrument-detail-header .instrument-title {
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.instrument-detail-header .instrument-subtitle {
+  font-size: 1.1em;
+  color: #666;
+}
+
+.instrument-detail-image {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.instrument-detail-image img {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.instrument-detail-content {
+  font-size: 1em;
+  color: #333;
+  line-height: 1.8;
+  text-align: justify;
+  padding: 0 20px 20px;
+}
+
+.instrument-detail-content h2, 
+.instrument-detail-content h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+
+.instrument-detail-content ul {
+  margin-left: 1.5em;
+}
+
+.back-button-container {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #0073e6;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.back-button:hover {
+  background: #005bb5;
+}

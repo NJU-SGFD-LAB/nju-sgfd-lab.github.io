@@ -1,0 +1,30 @@
+---
+layout: base
+---
+
+<div class="instrument-detail-page">
+
+  <div class="instrument-detail-header">
+    <h1 class="instrument-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <h2 class="instrument-subtitle">{{ page.subtitle }}</h2>
+    {% endif %}
+  </div>
+
+  {% if page.image %}
+  <div class="instrument-detail-image">
+    <img src="{{ '/assets/images/instruments/' | append: page.image | relative_url }}" alt="{{ page.title }}">
+  </div>
+  {% endif %}
+
+  <div class="instrument-detail-content">
+    {{ content }}
+  </div>
+
+  <div class="back-button-container">
+    <a href="{{ '/instruments/' | relative_url }}" class="back-button">
+      &larr; {% if page.lang == "zh" %}返回仪器列表{% else %}Back to Instruments{% endif %}
+    </a>
+  </div>
+
+</div>

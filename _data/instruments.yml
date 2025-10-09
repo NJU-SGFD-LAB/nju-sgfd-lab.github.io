@@ -1,0 +1,29 @@
+- id: instr1
+  name_zh: 大型旋转水槽
+  name_en: Large Rotating Tank
+  img: large_rotating_tank.jpg
+  intro_zh: >
+    水槽直径1.1m，高0.2m，配备220v供电系统和wifi摄像机，3台1kW 538nm红色片激光器。主要用于大尺度大气海洋运动的实验模拟。
+  intro_en: >
+    The tank is 1.1m in diameter and 0.2m in height, equipped with a 220v power supply system and a wifi camera, and three 1kW 538nm red sheet lasers. It is mainly used for experimental simulation of large-scale atmospheric and oceanic motions.
+  detail_page: large_rotating_tank
+
+- id: instr2
+  name_zh: 长波浪水槽
+  name_en: long wave channel
+  img: long_channel.jpg
+  intro_zh: >
+    水槽长2.4m，宽约0.12m, 高0.5m，底部有斜坡地形，一端设有造波机（步进电机驱动皮带道轨，挂在五面体空心有机玻璃块）。可制造近似简谐波。波动沿斜坡传播，水深减小，振幅增大直至破碎。在水面置一瓶盖，可观察Stokes drift：有限振幅波对物质的输送作用。底部有若干入/出水口，可制作层结。
+  intro_en: >
+    The tank is 2.4m long, about 0.12m wide, and 0.5m high, with sloping terrain at the bottom. One end is equipped with a wave maker (a stepper motor drives a belt track, hanging on a pentagonal hollow plexiglass block). It can produce approximately harmonic waves. As the wave propagates along the slope, the water depth decreases and the amplitude increases until it breaks. A bottle cap can be placed on the water surface to observe Stokes drift: the transport effect of finite amplitude waves on substances. There are several inlet/outlet ports at the bottom to create stratification.
+  detail_page: long_channel
+
+- id: instr3
+  name_zh: 小型波浪水槽
+  name_en: mini wave channel
+  img: mini_channel.jpg
+  intro_zh: >
+    水槽由层结水槽改造而来。长1.0m，宽约0.1m, 高0.6m，通过造波机制造近似简谐波。
+  intro_en: >
+    The tank is modified from a stratified tank. It is 1.0m long, about 0.1m wide, and 0.6m high. It produces approximately harmonic waves through a wave maker.
+  detail_page: mini-channel
