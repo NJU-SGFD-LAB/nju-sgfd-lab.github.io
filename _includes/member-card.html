@@ -1,0 +1,16 @@
+{% assign name_key = 'name_' | append: include.lang %}
+{% assign intro_key = 'intro_' | append: include.lang %}
+<article class="member-card{% if include.member.demo %} is-demo{% endif %}">
+  <div class="member-portrait">
+    {% if include.member.photo %}
+      <img src="{{ include.member.photo | relative_url }}" alt="{{ include.member[name_key] }}">
+    {% else %}
+      <span aria-hidden="true">{{ include.member.initials }}</span>
+    {% endif %}
+    {% if include.member.demo %}<span class="demo-badge portrait-badge">DEMO</span>{% endif %}
+  </div>
+  <div class="member-copy">
+    <h3>{{ include.member[name_key] }}</h3>
+    <p>{{ include.member[intro_key] }}</p>
+  </div>
+</article>

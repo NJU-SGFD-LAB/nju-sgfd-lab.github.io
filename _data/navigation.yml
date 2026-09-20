@@ -1,0 +1,40 @@
+zh:
+  - label: 首页
+    url: /
+    key: home
+  - label: 实验仪器
+    url: /instruments/
+    key: instruments
+  - label: 成员
+    url: /members/
+    key: members
+  - label: 论文与成果
+    url: /outputs/
+    key: outputs
+  - label: 博客
+    url: /blog/
+    key: blog
+  - label: 关于我们
+    url: /about/
+    key: about
+
+en:
+  - label: Home
+    url: /en/
+    key: home
+  - label: Facilities
+    url: /en/instruments/
+    key: instruments
+  - label: People
+    url: /en/members/
+    key: members
+  - label: Publications & Outputs
+    url: /en/outputs/
+    key: outputs
+  - label: Blog (Chinese)
+    url: /blog/
+    key: blog
+    cross_language: true
+  - label: About
+    url: /en/about/
+    key: about

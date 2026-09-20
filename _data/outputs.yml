@@ -1,0 +1,39 @@
+- type: journal
+  year: "20XX"
+  title_zh: "示例：期刊论文题目"
+  title_en: "Demo: Journal article title"
+  authors_zh: 作者信息待补充
+  authors_en: Authors to be added
+  venue_zh: 期刊名称、卷期与 DOI 将在正式内容阶段补充
+  venue_en: Journal, volume, and DOI will be added with the final content
+  demo: true
+
+- type: journal
+  year: "20XX"
+  title_zh: "示例：另一项期刊论文成果"
+  title_en: "Demo: Another journal article"
+  authors_zh: 作者信息待补充
+  authors_en: Authors to be added
+  venue_zh: 期刊名称、卷期、页码与 DOI 将在正式内容阶段补充
+  venue_en: Journal, volume, pages, and DOI will be added with the final content
+  demo: true
+
+- type: conference
+  year: "20XX"
+  title_zh: "示例：会议报告题目"
+  title_en: "Demo: Conference presentation title"
+  authors_zh: 报告人与合作者待补充
+  authors_en: Presenter and collaborators to be added
+  venue_zh: 会议名称与报告信息将在正式内容阶段补充
+  venue_en: Conference and presentation details will be added later
+  demo: true
+
+- type: project
+  year: "20XX"
+  title_zh: "示例：学生科研项目"
+  title_en: "Demo: Student research project"
+  authors_zh: 项目成员待补充
+  authors_en: Project members to be added
+  venue_zh: 项目简介、成果和相关资料将在正式内容阶段补充
+  venue_en: Project summary, outputs, and related materials will be added later
+  demo: true

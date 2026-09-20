@@ -2,7 +2,7 @@
 layout: home
 title: Home
 lang: en
+nav_key: home
 permalink: /en/
-nav_order: 1
+alternate_url: /
 ---
-Welcome to the Student Geophysical Fluid Dynamics Lab of Nanjing University!

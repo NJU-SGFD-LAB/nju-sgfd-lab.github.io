@@ -1,0 +1,45 @@
+zh:
+  eyebrow: 南京大学 · 大气科学学院
+  title: 南京大学地球流体力学实验室
+  tagline: 我们自主研制流体实验装置、开发数值模拟程序，探索大气、海洋与旋转层结流体运动的基本规律。
+  intro_title: 从实验桌出发，理解地球流体
+  intro: 南京大学地球流体力学实验室起源于2012年，于2014年正式建成，是由学生参与建设和管理的科研实践平台。我们鼓励成员亲手设计实验装置、开展流体实验并编写数值模式，从理论、实验和数值模拟等不同角度，探索大气、海洋及旋转行星中流体运动的物理机制。
+  research_label: 研究方向
+  research:
+    - index: "01"
+      title: 台风生成实验模拟
+      description: 利用可控的流体实验装置，对台风生成过程中的关键动力和热力机制进行理想化模拟。
+    - index: "02"
+      title: 波流相互作用
+      description: 结合波浪水槽实验与数值模拟，研究波动与背景流相互影响的基本过程。
+  outputs_title: 最新成果
+  blog_title: 最新博客
+  all_outputs: 查看全部成果
+  all_blog: 查看全部文章
+  blog_language_note: 中文全文
+  contact_title: 保持联系
+  contact_text: 欢迎对地球流体实验、数值模拟和学生科研感兴趣的同学与我们交流。
+  contact_pending: 详细联系方式将在正式内容阶段补充。
+
+en:
+  eyebrow: School of Atmospheric Sciences · Nanjing University
+  title: Nanjing University Geophysical Fluid Dynamics Laboratory
+  tagline: Through self-developed fluid-dynamics apparatus and numerical models, we explore the fundamental dynamics of the atmosphere, oceans, and rotating stratified fluids.
+  intro_title: Understanding geophysical flows from the laboratory bench
+  intro: Founded by students in 2012 and formally established in 2014, the NJU GFD Lab is a hands-on research platform shaped and managed with active student participation. We design experimental apparatus, conduct fluid-dynamics experiments, and develop numerical models to investigate the physical mechanisms governing flows in the atmosphere, oceans, and rotating planetary systems.
+  research_label: Research directions
+  research:
+    - index: "01"
+      title: Laboratory Simulation of Tropical Cyclogenesis
+      description: Controlled fluid experiments are used to investigate the fundamental dynamical and thermodynamical processes involved in tropical cyclone formation.
+    - index: "02"
+      title: Wave–Current Interaction
+      description: Laboratory experiments and numerical simulations are combined to study the fundamental interactions between waves and background flows.
+  outputs_title: Recent outputs
+  blog_title: From the blog
+  all_outputs: View all outputs
+  all_blog: View all posts
+  blog_language_note: Full article in Chinese
+  contact_title: Get in touch
+  contact_text: We welcome conversations with students and researchers interested in geophysical fluid experiments, numerical modeling, and student-led research.
+  contact_pending: Detailed contact information will be added with the final content.

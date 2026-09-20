@@ -1,0 +1,31 @@
+---
+layout: base
+---
+<section class="page-hero shell">
+  <p class="eyebrow">LAB JOURNAL</p>
+  <h1>{{ page.title }}</h1>
+  <p class="page-intro">{{ page.intro }}</p>
+</section>
+
+<section class="section blog-section">
+  <div class="shell blog-list">
+    {% assign blog_posts = site.posts | where: 'lang', 'zh' %}
+    {% for post in blog_posts %}
+      <article class="blog-card">
+        <div class="blog-date">
+          <span>{{ post.date | date: '%Y' }}</span>
+          <strong>{{ post.date | date: '%m.%d' }}</strong>
+        </div>
+        <div class="blog-card-main">
+          <div class="item-meta">
+            {% if post.author %}<span>{{ post.author }}</span>{% endif %}
+            {% if post.demo %}<span class="demo-badge">DEMO</span>{% endif %}
+          </div>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p>{{ post.excerpt_text | default: post.excerpt | strip_html }}</p>
+          <a class="text-link" href="{{ post.url | relative_url }}">阅读全文 <span>↗</span></a>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>

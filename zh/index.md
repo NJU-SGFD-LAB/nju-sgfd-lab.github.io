@@ -2,7 +2,7 @@
 layout: home
 title: 首页
 lang: zh
+nav_key: home
 permalink: /
-nav_order: 1
+alternate_url: /en/
 ---
-欢迎来到南京大学学生流体力学实验室！

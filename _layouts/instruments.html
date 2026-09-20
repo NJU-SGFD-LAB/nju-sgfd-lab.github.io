@@ -1,37 +1,29 @@
 ---
 layout: base
 ---
+<section class="page-hero shell">
+  <p class="eyebrow">FACILITIES</p>
+  <h1>{{ page.title }}</h1>
+  <p class="page-intro">{{ page.intro }}</p>
+</section>
 
-<div class="instruments-page">
-
-  {%- for instr in site.data.instruments -%}
-  <div class="instrument-card">
-
-    <img 
-      class="instrument-image"
-      src="{{ '/assets/images/instruments/' | append: instr.img | relative_url }}" 
-      alt="{{ instr.name_zh }}"
-    >
-
-    <div class="instrument-info">
-      <h2 class="instrument-title">{{ instr.name_zh }}</h2>
-      <h3 class="instrument-subtitle">{{ instr.name_en }}</h3>
-
-      <p class="instrument-description">
-        {% if page.lang == "zh" %}
-          {{ instr.intro_zh }}
-        {% else %}
-          {{ instr.intro_en }}
-        {% endif %}
-      </p>
-
-
-      <a href="{{ '/instruments/' | append: page.lang | append: '/' | append: instr.detail_page | append: '.html' | relative_url }}">
-        {% if page.lang == "zh" %} 详情 {% else %} Learn More {% endif %}
-      </a>
-    </div>
-
+<section class="section instruments-section">
+  <div class="shell instrument-list">
+    {% assign name_key = 'name_' | append: page.lang %}
+    {% assign intro_key = 'intro_' | append: page.lang %}
+    {% assign url_key = 'url_' | append: page.lang %}
+    {% for instr in site.data.instruments %}
+      <article class="instrument-card">
+        <a class="instrument-media" href="{{ instr[url_key] | relative_url }}">
+          <img src="{{ '/assets/images/instruments/' | append: instr.img | relative_url }}" alt="{{ instr[name_key] }}">
+          <span class="instrument-number">0{{ forloop.index }}</span>
+        </a>
+        <div class="instrument-copy">
+          <h2><a href="{{ instr[url_key] | relative_url }}">{{ instr[name_key] }}</a></h2>
+          <p>{{ instr[intro_key] }}</p>
+          <a class="text-link" href="{{ instr[url_key] | relative_url }}">{% if page.lang == 'en' %}View facility{% else %}查看装置{% endif %} <span>↗</span></a>
+        </div>
+      </article>
+    {% endfor %}
   </div>
-  {%- endfor -%}
-
-</div>
+</section>

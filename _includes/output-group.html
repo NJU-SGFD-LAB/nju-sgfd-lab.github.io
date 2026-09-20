@@ -1,0 +1,34 @@
+{% assign title_key = 'title_' | append: include.lang %}
+{% assign authors_key = 'authors_' | append: include.lang %}
+{% assign venue_key = 'venue_' | append: include.lang %}
+{% if include.type == 'journal' %}
+  {% if include.lang == 'en' %}{% assign group_title = 'Journal articles' %}{% else %}{% assign group_title = '期刊论文' %}{% endif %}
+{% elsif include.type == 'conference' %}
+  {% if include.lang == 'en' %}{% assign group_title = 'Conference presentations' %}{% else %}{% assign group_title = '会议报告' %}{% endif %}
+{% else %}
+  {% if include.lang == 'en' %}{% assign group_title = 'Student research projects' %}{% else %}{% assign group_title = '学生项目' %}{% endif %}
+{% endif %}
+
+<section class="output-group">
+  <h2 class="output-group-title">{{ group_title }}</h2>
+  <div class="output-list">
+    {% for item in include.items %}
+      <article class="output-item">
+        <h3>
+          {% if item.url %}<a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{% endif %}
+          {{ item[title_key] }}
+          {% if item.url %}</a>{% endif %}
+        </h3>
+        <p class="output-meta-line"><time>{{ item.year }}</time><span>{{ item[authors_key] }}</span></p>
+        <p class="output-citation">
+          {{ item[venue_key] }}
+          {% if item.url %}
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{% if include.lang == 'en' %}Citation link{% else %}引用链接{% endif %} ↗</a>
+          {% else %}
+            <span class="output-link-placeholder">{% if include.lang == 'en' %}Link to be added{% else %}链接待补充{% endif %}</span>
+          {% endif %}
+        </p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

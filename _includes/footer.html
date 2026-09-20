@@ -1,37 +1,20 @@
-<link id="fa-stylesheet" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.0.0/css/all.min.css">
-
-<footer class="site-footer h-card">
-  <data class="u-url" value="{{ '/' | relative_url }}"></data>
-
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-      {%- if site.author %}
-        <ul class="contact-list">
-          {% if site.author.name -%}
-            <li class="p-name">{{ site.author.name | escape }}</li>
-          {% endif -%}
-          {% if site.author.email -%}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-          {%- endif %}
-        </ul>
-      {%- endif %}
-
-    {% if site.address %}
-        <p class="p-adr">{{ site.address | escape }}</p>
-    {% endif %}
-
-      </div>
-      <div class="footer-col">
-        <p>{{ site.description | escape }}</p>
-      </div>
+{% assign current_lang = page.lang | default: 'zh' %}
+<footer class="site-footer">
+  <div class="shell footer-grid">
+    <div>
+      <div class="footer-brand">{{ site.short_title }}</div>
+      <p class="footer-statement">
+        {% if current_lang == 'en' %}
+          Experiments, models, and student-led discovery.
+        {% else %}
+          实验、模式与由学生推动的探索。
+        {% endif %}
+      </p>
     </div>
-
-    <div class="social-links">
-      {%- include social.html -%}
+    <div class="footer-meta">
+      <p>{% if current_lang == 'en' %}{{ site.affiliation_en }}{% else %}{{ site.affiliation_zh }}{% endif %}</p>
+      <p>{% if current_lang == 'en' %}Contact details coming soon{% else %}联系方式将在正式内容阶段补充{% endif %}</p>
     </div>
-
+    <div class="footer-year">© {{ 'now' | date: '%Y' }} {{ site.short_title }}</div>
   </div>
-
 </footer>

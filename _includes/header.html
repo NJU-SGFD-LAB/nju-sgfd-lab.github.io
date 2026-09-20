@@ -1,28 +1,43 @@
-<header class="site-header">
+{% assign current_lang = page.lang | default: 'zh' %}
+{% assign nav_items = site.data.navigation[current_lang] %}
+{% if current_lang == 'en' %}
+  {% assign home_url = '/en/' %}
+{% else %}
+  {% assign home_url = '/' %}
+{% endif %}
 
-  <!-- 第一行：标题 -->
-  <div class="header-title">
-    <span class="title-zh">{{ site.title_zh | default: "南京大学 SGFD 实验室" }}</span><br>
-    <span class="title-en">{{ site.title_en | default: "NJU SGFD Lab" }}</span>
-  </div>
+<header class="site-header" data-site-header>
+  <div class="shell header-inner">
+    <a class="site-brand" href="{{ home_url | relative_url }}" aria-label="{{ site.short_title }} home">
+      <span class="brand-mark" aria-hidden="true">
+        <span class="brand-wave"></span>
+        <span>GFD</span>
+      </span>
+      <span class="brand-copy">
+        <span class="brand-name">{% if current_lang == 'en' %}NJU GFD Lab{% else %}南京大学地球流体力学实验室{% endif %}</span>
+        <span class="brand-subtitle">{% if current_lang == 'en' %}Nanjing University{% else %}NJU GFD LAB{% endif %}</span>
+      </span>
+    </a>
 
-  <!-- 第二行：导航 + 语言切换 -->
-  <div class="header-nav-lang">
-    <!-- 左侧导航栏 -->
-    <nav class="site-nav">
-      {% assign nav_pages = site.pages | where_exp: "p", "p.lang == page.lang" | sort: "nav_order" %}
-      {% assign nav_paths = nav_pages | map: "path" %}
-      {% include nav-items.html paths=nav_paths %}
-    </nav>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>
+      <span class="sr-only">{% if current_lang == 'en' %}Open navigation{% else %}打开导航{% endif %}</span>
+      <span></span><span></span><span></span>
+    </button>
 
-    <!-- 右侧语言切换按钮 -->
-    <div class="language-switch">
-      {% if page.lang == "en" %}
-        <a href="{{ page.url | replace:'/en/', '/' }}">中文</a>
-      {% else %}
-        <a href="{{ page.url | prepend: '/en/' | replace: '//', '/' }}">English</a>
+    <div class="header-actions" id="site-navigation" data-navigation>
+      <nav class="primary-nav" aria-label="{% if current_lang == 'en' %}Primary navigation{% else %}主导航{% endif %}">
+        {% for item in nav_items %}
+          <a href="{{ item.url | relative_url }}" class="nav-link{% if page.nav_key == item.key %} is-active{% endif %}{% if item.cross_language %} is-cross-language{% endif %}">
+            {{ item.label }}
+          </a>
+        {% endfor %}
+      </nav>
+
+      {% if page.alternate_url %}
+        <a class="language-link" href="{{ page.alternate_url | relative_url }}" hreflang="{% if current_lang == 'en' %}zh{% else %}en{% endif %}">
+          {% if current_lang == 'en' %}中文{% else %}EN{% endif %}
+        </a>
       {% endif %}
     </div>
   </div>
-
 </header>

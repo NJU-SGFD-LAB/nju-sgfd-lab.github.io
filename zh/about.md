@@ -1,20 +1,19 @@
 ---
-layout: page
-title: 关于
+layout: about
+title: 关于我们
+intro: 南京大学地球流体力学实验室起源于2012年，于2014年正式建成，是由学生参与建设和管理的科研实践平台。
 lang: zh
+nav_key: about
 permalink: /about/
-nav_order: 10
+alternate_url: /en/about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+## 在可控实验中理解真实世界
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+地球物理流体力学的研究方法包括理论推导、观测分析、数值模拟和实验模拟。与真实大气和海洋相比，实验室中的流体实验具有尺度可控、现象直观和过程可重复等特点，也为发现和理解新的物理问题提供了可能。
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
+由于实验室无法完整再现真实大气和海洋环境，实验模拟的核心思想是建立物理类比。我们通过控制旋转、加热、层结和几何尺度等实验条件，使 Rossby 数、Rayleigh 数等关键无量纲参数接近目标地球流体过程，从而在可控环境中研究复杂流动的基本机制。
 
+## 由学生推动的科研实践
 
-[jekyll-organization]: https://github.com/jekyll
+我们鼓励成员从问题出发，亲手设计和搭建实验装置，记录与分析流动现象，并通过数值模式检验对物理过程的理解。实验室希望成为一个允许尝试、讨论与协作的空间，让成员在真实的研究过程中学习如何提出问题和解决问题。

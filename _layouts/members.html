@@ -1,32 +1,39 @@
 ---
 layout: base
 ---
+<section class="page-hero shell">
+  <p class="eyebrow">PEOPLE</p>
+  <h1>{{ page.title }}</h1>
+  <p class="page-intro">{{ page.intro }}</p>
+</section>
 
-<div class="members-page wrapper">
+{% assign advisor_members = site.data.members | where: 'group', 'advisors' %}
+{% assign student_members = site.data.members | where: 'group', 'students' %}
 
-  <h1 class="page-title">
-    {% if page.lang == "zh" %}
-      成员介绍
-    {% else %}
-      Our Members
-    {% endif %}
-  </h1>
-
-  <div class="members-grid">
-    {% for member in site.data.members %}
-    <div class="member-card">
-      <img src="{{ member.photo | relative_url }}" alt="{{ member.name }}" class="member-photo">
-      <div class="member-info">
-        <h2 class="member-name">{{ member.name }}</h2>
-        {% if page.lang == "zh" %}
-          <p class="member-title">{{ member.title_zh }}</p>
-          <p class="member-intro">{{ member.intro_zh }}</p>
-        {% else %}
-          <p class="member-title">{{ member.title_en }}</p>
-          <p class="member-intro">{{ member.intro_en }}</p>
-        {% endif %}
-      </div>
+<section class="section members-section">
+  <div class="shell">
+    <div class="section-title-row section-title-border">
+      <h2>{% if page.lang == 'en' %}Faculty advisors{% else %}指导老师{% endif %}</h2>
+      <span>{{ advisor_members.size | prepend: '0' | slice: -2, 2 }}</span>
     </div>
-    {% endfor %}
+    <div class="member-grid member-grid-advisors">
+      {% for member in advisor_members %}
+        {% include member-card.html member=member lang=page.lang %}
+      {% endfor %}
+    </div>
   </div>
-</div>
+</section>
+
+<section class="section members-section members-section-students">
+  <div class="shell">
+    <div class="section-title-row section-title-border">
+      <h2>{% if page.lang == 'en' %}Student members{% else %}学生成员{% endif %}</h2>
+      <span>{{ student_members.size | prepend: '0' | slice: -2, 2 }}</span>
+    </div>
+    <div class="member-grid">
+      {% for member in student_members %}
+        {% include member-card.html member=member lang=page.lang %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,20 @@
+---
+layout: base
+---
+<section class="page-hero shell">
+  <p class="eyebrow">PUBLICATIONS & OUTPUTS</p>
+  <h1>{{ page.title }}</h1>
+  <p class="page-intro">{{ page.intro }}</p>
+</section>
+
+{% assign journal_items = site.data.outputs | where: 'type', 'journal' %}
+{% assign conference_items = site.data.outputs | where: 'type', 'conference' %}
+{% assign project_items = site.data.outputs | where: 'type', 'project' %}
+
+<section class="section outputs-section">
+  <div class="shell">
+    {% include output-group.html items=journal_items type='journal' lang=page.lang number='01' %}
+    {% include output-group.html items=conference_items type='conference' lang=page.lang number='02' %}
+    {% include output-group.html items=project_items type='project' lang=page.lang number='03' %}
+  </div>
+</section>

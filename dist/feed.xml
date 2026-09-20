@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="https://nju-sgfd-lab.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://nju-sgfd-lab.github.io/" rel="alternate" type="text/html" /><updated>2026-09-20T20:18:51+08:00</updated><id>https://nju-sgfd-lab.github.io/feed.xml</id><title type="html">Nanjing University Geophysical Fluid Dynamics Laboratory</title><subtitle>Student-led geophysical fluid dynamics experiments and numerical modeling at Nanjing University.</subtitle><entry xml:lang="zh"><title type="html">为什么要在实验室里研究大气与海洋？</title><link href="https://nju-sgfd-lab.github.io/2026/09/18/understanding-gfd-experiments.html" rel="alternate" type="text/html" title="为什么要在实验室里研究大气与海洋？" /><published>2026-09-18T00:00:00+08:00</published><updated>2026-09-18T00:00:00+08:00</updated><id>https://nju-sgfd-lab.github.io/2026/09/18/understanding-gfd-experiments</id><content type="html" xml:base="https://nju-sgfd-lab.github.io/2026/09/18/understanding-gfd-experiments.html"><![CDATA[<p>这是一篇用于展示博客排版的 Demo 文章。正式版本可以从一个具体问题出发，介绍实验模型、无量纲参数和观察到的流体现象，并加入实验照片、示意图与参考资料。</p>
+
+<h2 id="从真实过程到实验模型">从真实过程到实验模型</h2>
+
+<p>实验模拟并不是按比例缩小真实的大气和海洋，而是尽可能保持关键物理机制及其无量纲参数。后续撰写正式文章时，可以在这里解释实验设计与真实地球流体过程之间的对应关系。</p>
+
+<h2 id="demo-内容说明">Demo 内容说明</h2>
+
+<p>本页文字只用于展示标题、摘要、正文、二级标题和返回导航的视觉效果，不代表已经完成的正式科普内容。</p>]]></content><author><name>NJU GFD Lab</name></author><summary type="html"><![CDATA[这是一篇用于展示博客排版的 Demo 文章。正式版本可以从一个具体问题出发，介绍实验模型、无量纲参数和观察到的流体现象，并加入实验照片、示意图与参考资料。]]></summary></entry><entry xml:lang="zh"><title type="html">从波浪水槽中可以看到什么？</title><link href="https://nju-sgfd-lab.github.io/2026/09/12/wave-channel-notes.html" rel="alternate" type="text/html" title="从波浪水槽中可以看到什么？" /><published>2026-09-12T00:00:00+08:00</published><updated>2026-09-12T00:00:00+08:00</updated><id>https://nju-sgfd-lab.github.io/2026/09/12/wave-channel-notes</id><content type="html" xml:base="https://nju-sgfd-lab.github.io/2026/09/12/wave-channel-notes.html"><![CDATA[<p>这是一篇实验记录形式的 Demo 文章。正式内容可以记录实验目的、装置设置、操作过程、现象描述和初步解释。</p>
+
+<h2 id="实验记录的建议结构">实验记录的建议结构</h2>
+
+<p>一篇完整的实验记录可以依次说明研究问题、实验参数、观测方法、关键现象、数据处理方式和仍未解决的问题。即使实验没有得到预期结果，过程中的判断和修正也值得保留。</p>]]></content><author><name>NJU GFD Lab</name></author><summary type="html"><![CDATA[这是一篇实验记录形式的 Demo 文章。正式内容可以记录实验目的、装置设置、操作过程、现象描述和初步解释。]]></summary></entry></feed>
