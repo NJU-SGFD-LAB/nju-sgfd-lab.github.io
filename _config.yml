@@ -6,7 +6,7 @@ description: Student-led geophysical fluid dynamics experiments and numerical mo
 description_zh: 南京大学地球流体力学实验室，通过自主实验装置与数值模拟探索地球流体运动。
 affiliation_zh: 南京大学大气科学学院
 affiliation_en: School of Atmospheric Sciences, Nanjing University
-url: "https://nju-sgfd-lab.github.io"
+url: "https://nju-gfd-lab.github.io"
 baseurl: ""
 
 theme: minima
@@ -38,4 +38,5 @@ exclude:
   - Gemfile.lock
   - PROJECT_HANDOFF.md
   - README.md
+  - UPDATE_AND_DEPLOY.md
   - vendor

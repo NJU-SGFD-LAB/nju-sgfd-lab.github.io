@@ -1,4 +1,7 @@
 _site
+.DS_Store
+PROJECT_HANDOFF.md
+UPDATE_AND_DEPLOY.md
 .sass-cache
 .jekyll-cache
 .jekyll-metadata

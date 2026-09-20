@@ -16,8 +16,8 @@
 - 项目路径：`/Users/yeyuqin/Projects/GFDLabWeb/nju-sgfd-lab.github.io`
 - 技术栈：Jekyll、GitHub Pages、Liquid、SCSS 和少量原生 JavaScript
 - Git 分支：`master`
-- 远端仓库：`https://github.com/NJU-SGFD-LAB/nju-sgfd-lab.github.io.git`
-- 配置中的站点地址：`https://nju-sgfd-lab.github.io`
+- 远端仓库：`https://github.com/NJU-GFD-LAB/nju-gfd-lab.github.io.git`
+- 配置中的站点地址：`https://nju-gfd-lab.github.io`
 - 中文正式名称：南京大学地球流体力学实验室
 - 当前英文工作名称：Nanjing University Geophysical Fluid Dynamics Laboratory
 - 网站简称：NJU GFD Lab
@@ -282,4 +282,3 @@ bundle exec jekyll build
 
 请先核对素材是否完整，再按现有数据格式录入；不要虚构缺失信息。完成后执行 Jekyll 构建、git diff --check，并检查受影响页面的桌面端和手机端。最后说明修改了什么、还有哪些内容需要用户确认。未经要求不要提交、推送或发布。
 ```
-

@@ -4,46 +4,32 @@ layout: base
 {% assign home = site.data.home[page.lang] %}
 
 <section class="hero shell">
-  <div class="hero-copy">
-    <p class="eyebrow">{{ home.eyebrow }}</p>
-    <h1>{{ home.title }}</h1>
-    <p class="hero-tagline">{{ home.tagline }}</p>
-    <div class="hero-line" aria-hidden="true"><span></span></div>
-  </div>
-
   <div class="hero-mosaic" aria-label="{% if page.lang == 'en' %}Laboratory facilities{% else %}实验室装置{% endif %}">
-    <figure class="hero-photo hero-photo-main">
-      <img src="{{ '/assets/images/instruments/large_rotating_tank.jpg' | relative_url }}" alt="{% if page.lang == 'en' %}Large rotating tank{% else %}大型旋转水槽{% endif %}">
-    </figure>
-    <figure class="hero-photo hero-photo-top">
-      <img src="{{ '/assets/images/instruments/long_channel.jpg' | relative_url }}" alt="{% if page.lang == 'en' %}Long wave channel{% else %}长波浪水槽{% endif %}">
-    </figure>
-    <figure class="hero-photo hero-photo-bottom">
-      <img src="{{ '/assets/images/instruments/mini_channel.jpg' | relative_url }}" alt="{% if page.lang == 'en' %}Mini wave channel{% else %}小型波浪水槽{% endif %}">
-    </figure>
-    <div class="hero-caption">2012 — {{ 'now' | date: '%Y' }}</div>
+    <div class="hero-mosaic-large">
+      <figure class="hero-photo">
+        <img src="{{ '/assets/images/home/fig1_left.jpg' | relative_url }}" alt="{% if page.lang == 'en' %}Geophysical fluid dynamics laboratory apparatus{% else %}地球流体力学实验装置{% endif %}">
+      </figure>
+      <figure class="hero-photo">
+        <img src="{{ '/assets/images/home/fig2_mid.jpg' | relative_url }}" alt="{% if page.lang == 'en' %}Laboratory experimental facilities{% else %}实验室实验设备{% endif %}">
+      </figure>
+    </div>
+    <div class="hero-mosaic-small">
+      <figure class="hero-photo">
+        <img src="{{ '/assets/images/home/fig3_righttop.jpg' | relative_url }}" alt="{% if page.lang == 'en' %}Students working in the laboratory{% else %}实验室成员开展实验{% endif %}">
+      </figure>
+      <figure class="hero-photo">
+        <img src="{{ '/assets/images/home/fig4_rightdown.jpg' | relative_url }}" alt="{% if page.lang == 'en' %}Flow visualization from a laboratory experiment{% else %}实验中的流动可视化结果{% endif %}">
+      </figure>
+    </div>
   </div>
 </section>
 
 <section class="section section-intro">
-  <div class="shell intro-grid">
+  <div class="shell intro-block">
     <div class="section-heading intro-copy">
       <p class="eyebrow">NJU GFD LAB</p>
-      <h2>{{ home.intro_title }}</h2>
+      <h1>{% if page.lang == 'en' %}{{ site.title_en }}{% else %}{{ site.title_zh }}{% endif %}</h1>
       <p class="lead-copy">{{ home.intro }}</p>
-    </div>
-
-    <div class="research-panel">
-      <div class="panel-label">{{ home.research_label }}</div>
-      {% for item in home.research %}
-        <article class="research-item">
-          <span class="research-index">{{ item.index }}</span>
-          <div>
-            <h3>{{ item.title }}</h3>
-            <p>{{ item.description }}</p>
-          </div>
-        </article>
-      {% endfor %}
     </div>
   </div>
 </section>
